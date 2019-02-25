@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MediaActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="388dp"
+        android:layout_height="210dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="-218dp"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imvPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="Prev"
+        android:src="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/imvPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imvPrev"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="2dp"
+        android:onClick="Play"
+        android:src="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/imvPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imvPlay"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="2dp"
+        android:onClick="Pause"
+        android:src="@android:drawable/ic_media_pause" />
+
+    <ImageButton
+        android:id="@+id/imvNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imvPause"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="Next"
+        android:src="@android:drawable/ic_media_next" />
+
+    <TextView
+        android:id="@+id/batdau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="155dp"
+        android:text="0 phut 0 giay" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imvPlay"
+        android:layout_alignTop="@+id/batdau"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:id="@+id/ketthuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/batdau"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"
+        android:text="0 phut 0 giay" />
+
+</RelativeLayout>
