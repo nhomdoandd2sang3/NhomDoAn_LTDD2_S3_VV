@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -31,6 +32,17 @@ public class Custom_GridView_BanCo extends ArrayAdapter<Integer> {
         Spinner spinnerGiaTien = (Spinner) view.findViewById(R.id.spinnerGiaTien);
         imgBanCo.setImageResource(objects[position]);
         spinnerGiaTien.setAdapter(adapter);
+        spinnerGiaTien.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         return view;
     }
 }
