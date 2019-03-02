@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Baitpa_exe1</string>
+    <string-array name="theme_array">
+        <item>Kiểu 1</item>
+        <item>Kiểu 2</item>
+        <item>Kiểu 3</item>
+        <item>Kiểu 4</item>
+        <item>Kiểu 5</item>
+    </string-array>
+</resources>
