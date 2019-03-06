@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class KieuAdapter extends RecyclerView.Adapter<KieuAdapter.ViewHolder> {
     ArrayList<DataKieu> data;
+
     private OnItemClickListener mListener;
     public interface OnItemClickListener {
         void onItemClick(int position);
@@ -41,19 +42,25 @@ public class KieuAdapter extends RecyclerView.Adapter<KieuAdapter.ViewHolder> {
         switch (stylekieu){
             case "Kieu 1":
                 viewHolder.itemView.setBackgroundColor(Color.WHITE);
+                viewHolder.txtKieu.setText("THEME_MATERIAL_LIGHT  - Color Background: gray");
+//                viewHolder.tvTitle.setTextColor();
                 break;
             case "Kieu 2":
                 viewHolder.itemView.setBackgroundColor(Color.YELLOW);
+                viewHolder.txtKieu.setText("Theme.AppCompat.Dialog.Alert  - Color Background: yellow");
+//                viewHolder.tvTitle.setTextColor(Color.YELLOW);
+                viewHolder.txtKieu.setTextColor(Color.BLUE);
+
                 break;
             case "Kieu 3":
                 viewHolder.itemView.setBackgroundColor(Color.BLUE);
+                viewHolder.txtKieu.setText("Theme.AppCompat.DayNight.Dialog.Alert  - Color Background: blue");
                 break;
             case "Kieu 4":
                 viewHolder.itemView.setBackgroundColor(Color.GREEN);
+                viewHolder.txtKieu.setText("ThemeOverlay.AppCompat.ActionBar  - Color Background: green");
                 break;
-            case "Kieu 5":
-                viewHolder.itemView.setBackgroundColor(Color.RED);
-                break;
+
         }
 
     }
@@ -65,9 +72,11 @@ public class KieuAdapter extends RecyclerView.Adapter<KieuAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView txtKieu;
+//        TextView tvTitle;
         public ViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
             txtKieu = (TextView)itemView.findViewById(R.id.tvKieu);
+//            tvTitle = (TextView)itemView.findViewById(R.id.tvHeader);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

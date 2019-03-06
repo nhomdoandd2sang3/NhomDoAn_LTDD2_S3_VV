@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(new DataKieu("Kieu 2"));
         arrayList.add(new DataKieu("Kieu 3"));
         arrayList.add(new DataKieu("Kieu 4"));
-        arrayList.add(new DataKieu("Kieu 5"));
+//        arrayList.add(new DataKieu("Kieu 5"));
 
         final KieuAdapter kieuAdapter = new KieuAdapter(arrayList, getApplicationContext());
         TextView tvheader = (TextView) findViewById(R.id.tvHeader);
