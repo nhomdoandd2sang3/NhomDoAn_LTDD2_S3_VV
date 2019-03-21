@@ -84,17 +84,17 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         String vt = data.getStringExtra("vị trí");
         if (requestCode == REQUEST_CODE_EDIT && resultCode == requestCode && data != null) {
-            drawView.startNew();
-
-            Toast.makeText(MainActivity.this, ""+vt, Toast.LENGTH_SHORT).show();
-            if (vt.equals("Tạo mới")) {
-
-                drawView.startNew();
-
-            } else {
-                drawView.startNew();
-                drawView.startNew1();
-            }
+//            drawView.startNew();
+//
+//            Toast.makeText(MainActivity.this, ""+vt, Toast.LENGTH_SHORT).show();
+//            if (vt.equals("Tạo mới")) {
+//
+//                drawView.startNew();
+//
+//            } else {
+//                drawView.startNew();
+//                drawView.startNew1();
+//            }
         }
         else
         {
@@ -118,6 +118,9 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
             else if(vt.equals("Hình chữ nhật")) {
                 drawView.startNew();
                 drawView.startNew4();
+            }
+            else if(vt.equals("Back")) {
+//                finish();
             }
         }
         super.onActivityResult(requestCode, resultCode, data);

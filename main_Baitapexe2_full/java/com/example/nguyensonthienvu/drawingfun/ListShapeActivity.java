@@ -29,20 +29,22 @@ public class ListShapeActivity extends AppCompatActivity {
         list.add("Hình vuông");
         list.add("Hình tam giác");
         list.add("Hình chữ nhật");
+        list.add("Back");
+
         ArrayAdapter adapter = new ArrayAdapter(ListShapeActivity.this, android.R.layout.simple_list_item_1, list);
         listView.setAdapter(adapter);
         imageButtonBack = (ImageButton)findViewById(R.id.ibtBack);
         imageButtonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Toast.makeText(ListShapeActivity.this, "Please press Back", Toast.LENGTH_SHORT).show();
             }
         });
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String vt = list.get(position);
-                Toast.makeText(ListShapeActivity.this, "fuck you"+list.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListShapeActivity.this, list.get(position), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ListShapeActivity.this, MainActivity.class);
                 intent.putExtra("vị trí",vt);
                 setResult(RESULT_OK,intent);
