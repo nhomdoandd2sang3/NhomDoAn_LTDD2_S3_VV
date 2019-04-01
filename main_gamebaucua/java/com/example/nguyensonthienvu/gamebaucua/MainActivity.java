@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -36,6 +37,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Build;
+import android.content.DialogInterface;
+import android.content.Intent;
 
 public class MainActivity extends Activity {
 
@@ -140,6 +143,7 @@ public class MainActivity extends Activity {
                         e.printStackTrace();
                     }
 
+
                 }
             }
         });
@@ -169,6 +173,7 @@ public class MainActivity extends Activity {
                 tvTien.setText(String.valueOf(tongtienmoi));
                 demthoigian.cancel();
                 demthoigian.start();
+
             }
         };
 
@@ -201,8 +206,27 @@ public class MainActivity extends Activity {
         if (kiemtra == 0) {
             Toast.makeText(getApplicationContext(), "Bạn vui lòng đặt cược ! ", Toast.LENGTH_SHORT).show();
         } else {
-            if (kiemtra > tongtiencu) {
+                if (kiemtra > tongtiencu || tongtiencu <= 0 || tongtienmoi <=0 || kiemtra > tongtienmoi) {
                 Toast.makeText(getApplicationContext(), "Bạn không đủ tiền để đặt cược ! ", Toast.LENGTH_SHORT).show();
+                ///////////////
+                    AlertDialog.Builder newDialog = new AlertDialog.Builder(this);
+                    newDialog.setTitle("Thong bao");
+                    newDialog.setMessage("Ban khong du tien dat cuoc.Ban co muon choi game khac trong khi doi tien tang len ?");
+                    newDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+//                    drawView.startNew1();
+                            Intent intent = new Intent(MainActivity.this, WaitActivity.class);
+                            startActivityForResult(intent, 1);
+                            dialog.dismiss();
+                        }
+                    });
+                    newDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    newDialog.show();
+                    ////////////////
             } else {
 
                 amThanhXiNgau.play(id_amthanh, 1.0f, 1.0f, 1, 0, 1.0f);

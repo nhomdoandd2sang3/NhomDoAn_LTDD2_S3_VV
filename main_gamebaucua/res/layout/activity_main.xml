@@ -49,15 +49,16 @@
             android:layout_marginLeft="50dp"
             android:text="00:03:00" />
     </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="215dp"
-        android:orientation="horizontal"
-        android:layout_margin="10dp">
+        android:layout_height="251dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
         <GridView
             android:id="@+id/gvBanCo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:numColumns="3"
             android:verticalSpacing="20dp">
