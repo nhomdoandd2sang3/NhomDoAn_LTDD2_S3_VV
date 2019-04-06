@@ -30,15 +30,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        btnback.setOnClickListener(new View.OnClickListener()
+    /*    btnback.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(MainActivity.this, .class);
+                Intent intent = new Intent(MainActivity.this,    .class);
                 startActivity(intent);
             }
         });
 
+*/
     }
 }

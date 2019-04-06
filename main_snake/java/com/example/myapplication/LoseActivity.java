@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class LoseActivity extends AppCompatActivity {
 
-    Button btnplayagain;
+    Button btnplayagain,btnmenu;
     TextView txtscore,txthighscore;
 
     @Override
@@ -23,7 +23,7 @@ public class LoseActivity extends AppCompatActivity {
         txtscore = (TextView) findViewById(R.id.txtScore);
         txthighscore = (TextView) findViewById(R.id.txtHighScore);
         btnplayagain = (Button) findViewById(R.id.btnPlayAgain);
-
+        btnmenu = (Button) findViewById(R.id.btnMenu);
 
         Bundle extras = getIntent().getExtras();
         txtscore.setText(extras.getString("score"));
@@ -55,6 +55,16 @@ public class LoseActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 Intent intent_new = new Intent(LoseActivity.this, SnakeActivity.class);
+                startActivity(intent_new);
+            }
+        });
+
+        btnmenu.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent_new = new Intent(LoseActivity.this, MainActivity.class);
                 startActivity(intent_new);
             }
         });

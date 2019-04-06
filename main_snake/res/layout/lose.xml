@@ -50,7 +50,21 @@
         android:layout_height="wrap_content"
         android:text="Chơi Lại"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:textSize="20dp"
+        android:padding="20dp"/>
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trở về"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:textSize="20dp"
+        android:padding="20dp"/>
 
 
 
