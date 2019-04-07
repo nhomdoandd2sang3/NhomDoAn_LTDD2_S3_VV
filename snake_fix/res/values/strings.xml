@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Snake Game</string>
+    <color name="background_color">#231F20</color>
+    <color name="lose_background_color">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+
+</resources>
