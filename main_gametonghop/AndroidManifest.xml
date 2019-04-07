@@ -19,6 +19,8 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".ManChoi"></activity>
         <activity android:name=".Pikachu"></activity>
+        <activity android:name=".MainSnakeActivity"></activity>
+        <activity android:name=".LoseActivity"></activity>
         <activity android:name=".SnakeActivity"></activity>
     </application>
 

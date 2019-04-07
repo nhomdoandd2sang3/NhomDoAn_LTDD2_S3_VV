@@ -34,7 +34,7 @@ public class ChooseGame extends AppCompatActivity {
         btnRan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseGame.this, SnakeActivity.class);
+                Intent intent = new Intent(ChooseGame.this, MainSnakeActivity.class);
                 startActivity(intent);
             }
         });
