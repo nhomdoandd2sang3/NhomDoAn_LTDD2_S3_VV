@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nguyensonthienvu.gamebaucua">
+    package="com.example.myapplication">
+
 
     <application
         android:allowBackup="true"
@@ -23,5 +24,6 @@
         <activity android:name=".LoseActivity"></activity>
         <activity android:name=".SnakeActivity"></activity>
     </application>
+
 
 </manifest>

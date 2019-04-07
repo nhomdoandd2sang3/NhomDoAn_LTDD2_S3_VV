@@ -5,62 +5,127 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainSnakeActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/lose_background_color">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/game_over"
-        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/game_over"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Điểm của bạn"
-        android:layout_gravity="center_horizontal"
-        android:textSize="50dp"
-        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điểm của bạn"
+            android:layout_gravity="center_horizontal"
+            android:textSize="50dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_gravity="center_horizontal"
+            android:textSize="50dp"
+            android:textColor="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtHighScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điểm cao nhất: 0"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/txtScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_gravity="center_horizontal"
-        android:textSize="50dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/txtHighScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Điểm cao nhất: 0"
-        android:layout_gravity="center_horizontal"
-        android:textSize="30dp"
-        android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/btnSnakePlayAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chơi Lại"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button"
+            android:textSize="20dp"
+            android:padding="20dp" />
 
-    <Button
-        android:id="@+id/btnPlayAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chơi Lại"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button"
-        android:textSize="20dp"
-        android:padding="20dp"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Trở về"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button"
-        android:textSize="20dp"
-        android:padding="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnSnakeMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trở về"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button"
+            android:textSize="20dp"
+            android:padding="20dp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
 
 
 
