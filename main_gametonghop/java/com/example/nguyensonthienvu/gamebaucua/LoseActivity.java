@@ -22,8 +22,8 @@ public class LoseActivity extends AppCompatActivity {
 
         txtscore = (TextView) findViewById(R.id.txtScore);
         txthighscore = (TextView) findViewById(R.id.txtHighScore);
-        btnplayagain = (Button) findViewById(R.id.btnPlayAgain);
-        btnmenu = (Button) findViewById(R.id.btnMenu);
+        btnplayagain = (Button) findViewById(R.id.btnSnakePlayAgain);
+        btnmenu = (Button) findViewById(R.id.btnSnakeMenu);
 
         Bundle extras = getIntent().getExtras();
         txtscore.setText(extras.getString("score"));

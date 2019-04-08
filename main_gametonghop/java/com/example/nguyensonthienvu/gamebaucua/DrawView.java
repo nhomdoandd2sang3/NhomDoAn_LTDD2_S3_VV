@@ -44,7 +44,7 @@ public class DrawView extends View
 		final int GameHight=10;
 		
 		//kich thuoc cua cac the hinh
-		final int CardSizeW=44;
+		final int CardSizeW=50;
 		final int CardSizeH=54;
 		
 		
@@ -183,8 +183,8 @@ public class DrawView extends View
 			
 			//GameHight la số dòng của bàn cờ
 			//GameWidth là số cột của bàn cờ
-			for(int i=0;i<=GameHight +1;i++)
-				for(int j=0;j<=GameWidth +1;j++)
+			for(int i=0;i<GameHight +1;i++)
+				for(int j=0;j<GameWidth +1;j++)
 				{
 					//tinh vi tri va kich thuoc hinh chu nhat
 					left=j*CardSizeW;
