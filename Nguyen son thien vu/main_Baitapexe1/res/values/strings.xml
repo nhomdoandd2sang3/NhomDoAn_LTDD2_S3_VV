@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Baitpa_exe1</string>
+    <string-array name="theme_array">
+        <item>Kiểu 1:THEME_MATERIAL_LIGHT  - Color Background: gray</item>
+        <item>Kiểu 2:Theme.AppCompat.Dialog.Alert  - Color Background: yellow</item>
+        <item>Kiểu 3:Theme.AppCompat.DayNight.Dialog.Alert  - Color Background: blue</item>
+        <item>Kiểu 4:ThemeOverlay.AppCompat.ActionBar  - Color Background: green</item>
+        <item>Kiểu 5:THEME_MATERIAL_LIGHT  - Color Background: xam</item>
+    </string-array>
+</resources>

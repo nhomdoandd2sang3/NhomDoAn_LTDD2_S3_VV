@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nguyensonthienvu.gamebaucua">
+    package="com.example.nguyensonthienvu.drawingfun">
 
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,21 +15,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChooseGame">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/name_api_key" />
+        <activity android:name=".MainActivityAnimation"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ListShapeActivity" />
+        <activity android:name=".Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".ManChoi"></activity>
-        <activity android:name=".Pikachu"></activity>
-        <activity android:name=".MainSnakeActivity"></activity>
-        <activity android:name=".LoseActivity"></activity>
-        <activity android:name=".SnakeActivity"></activity>
-        <activity android:name=".CaroMain"></activity>
+        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".MainActivityExe4"></activity>
     </application>
-
 
 </manifest>
